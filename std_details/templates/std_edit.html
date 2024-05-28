@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Student{% endblock title %} 
+{% block content %}
+
+<div class="row">
+  <div class="col-sm-4">
+    <h3>Update Student</h3>
+    <form action="" method="POST">
+      {% csrf_token %} {{form.as_p}}
+      <input type="submit" class="btn btn-primary" value="Update" />
+      <a href ="{% url 'std_list' %}" class="btn btn-primary"> Back to Home </a>
+    </form>
+  </div>
+</div>
+
+{% endblock content %}
